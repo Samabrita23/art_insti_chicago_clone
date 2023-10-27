@@ -1,0 +1,130 @@
+/* ExhibitionsRail.css */
+.exhibitions-rail {
+  padding: 1.4rem 4rem 1rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.exhi-header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: #1A1A1A;
+  font-size: 1.3125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.75rem;
+  letter-spacing: 0.11813rem;
+  text-transform: uppercase;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid  #E6E6E6;
+}
+
+.all-exhibitions-button {
+  color: #7E746D;
+  background-color: #fff;
+  font-size: 0.97119rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.75rem;
+  letter-spacing: 0.01063rem;
+  border: none;
+}
+
+.all-exhibitions-button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.exhi-cards {
+  display: flex;
+  flex-direction: row; 
+  align-items: flex-start;
+  gap: 2rem; 
+  padding: 2rem 0 2rem 0;
+}
+
+.exhi-card {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 0.7rem;
+  border-right: 1px solid  #E6E6E6; 
+  padding-right: 1.5rem;
+}
+
+
+
+.exhi-card img {
+  width: 38rem;
+  height: 23.4rem;
+}
+
+.exhi-card img:hover{
+  border-bottom: 4px solid grey;
+  margin-bottom: -4px; 
+  cursor: pointer;
+}
+
+.exhi-model {
+  color: #7E746D;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1rem; /* 133.333% */
+  letter-spacing: 0.105rem;
+  text-transform: uppercase;
+}
+
+.exhi-title {
+  color: #1A1A1A;
+  font-size: 1.57175rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.5rem; /* 159.056% */
+  letter-spacing: -0.00906rem;
+}
+.exhi-title:hover{
+  color: grey;
+  cursor: pointer;
+}
+.exhi-duration {
+  color: #767676;
+  font-size: 0.94631rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.75rem; /* 184.933% */
+  letter-spacing: 0.01063rem;
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .exhibitions-rail {
+    padding: 1.4rem 2rem 1rem;
+  }
+
+  .exhi-header {
+   gap:1rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .exhi-cards {
+    gap: 1rem;
+    padding: 1rem 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .exhi-header {
+    gap: 0.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .all-exhibitions-button {
+    font-size: 0.8rem;
+  }
+}

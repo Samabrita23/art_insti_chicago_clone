@@ -1,6 +1,8 @@
 // ExhibitionsRail.tsx
 import React, { useEffect, useState } from 'react';
+import {AxiosResponse} from 'axios';
 import axios from 'axios';
+
 import "../Styles/ExhibitionsRail.css";
 import { formatDateRange } from "./Common";
 import { Link } from 'react-router-dom';
@@ -19,9 +21,15 @@ const ExhibitionsRail: React.FC = () => {
 
   useEffect(() => {
     axios.get('https://api.artic.edu/api/v1/exhibitions')
-      .then((response) => setExhibitions(response.data.data))
+      .then((response: AxiosResponse<{ data: Exhibition[] }>) => setExhibitions(response.data.data))
       .catch((error) => console.error('Error fetching exhibitions:', error));
   }, []);
+  
+//   useEffect(() => {
+//     axios.get('https://api.artic.edu/api/v1/exhibitions')
+//       .then((response) => setExhibitions(response.data.data))
+//       .catch((error) => console.error('Error fetching exhibitions:', error));
+//   }, []);
 
   return (
     <div className="exhibitions-rail">

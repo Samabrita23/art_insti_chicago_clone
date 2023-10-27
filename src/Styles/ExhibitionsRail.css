@@ -1,6 +1,6 @@
 /* ExhibitionsRail.css */
 .exhibitions-rail {
-  padding: 1.4rem 4rem 1rem 4rem; 
+  padding: 1.4rem 4rem 4rem 4rem; 
   display: flex;
   flex-direction: column;
 }
@@ -17,7 +17,7 @@
   line-height: 1.75rem;
   letter-spacing: 0.11813rem;
   text-transform: uppercase;
-  padding-bottom: 1.5rem; /* Adjusted padding for smaller screens */
+  padding-bottom: 2rem; 
   border-bottom: 1px solid #E6E6E6;
 }
 
@@ -41,28 +41,33 @@
   display: flex;
   flex-direction: row; 
   justify-content: space-between;
-  padding: 1rem 4rem 1rem 0; 
+  padding: 1rem 0 1rem 0; 
   gap: 4rem;
-  margin-right: 4rem;
   overflow: hidden; 
-  
+}
+ 
+.exhi-wrap{
+  position: relative;
+  border-right: 1px solid #E6E6E6;
+  padding-right: 4rem;
 }
 
 .exhi-card {
+  position: relative;
   display: flex;
   flex-direction: column;
-  flex: 1; 
+  flex: 1;
   max-width: 40rem;
   text-align: left;
+  overflow: hidden; 
   gap: 0.7rem;
-  border-right: 1px solid #E6E6E6;
-  padding-right: 3.5rem;
 }
 
-.exhi-card img {
-  width: 40rem;
- height: 20rem;
 
+.exhi-card img {
+  width: 45rem; 
+  height: 25rem; 
+  object-fit: cover;
 }
 
 .exhi-card img:hover {
@@ -71,12 +76,14 @@
   cursor: pointer;
 }
 
+
+
 .exhi-model {
   color: #7E746D;
   font-size: 0.75rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 1rem; /* 133.333% */
+  line-height: 1rem;
   letter-spacing: 0.105rem;
   text-transform: uppercase;
 }
@@ -86,7 +93,7 @@
   font-size: 1.57175rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 2.5rem; /* 159.056% */
+  line-height: 2.5rem;
   letter-spacing: -0.00906rem;
 }
 
@@ -100,14 +107,14 @@
   font-size: 0.94631rem;
   font-style: normal;
   font-weight: 300;
-  line-height: 1.75rem; /* 184.933% */
+  line-height: 1.75rem; 
   letter-spacing: 0.01063rem;
 }
 
 /* Media Queries */
 @media (max-width: 768px) {
   .exhibitions-rail {
-    padding: 1.4rem 1rem 1rem; /* Further adjusted padding for smaller screens */
+    padding: 1.4rem 1rem 1rem; 
   }
   
   .exhi-header {
@@ -118,12 +125,16 @@
     gap: 1rem;
     padding: 1rem 1rem;
     flex-direction: column;
+
   }
+.exhi-wrap{
+  border-right:none;
+  border-bottom: 1px solid #E6E6E6;
+}
+
 
   .exhi-card img{
     width: 20rem;
 height: 10rem;
-flex-shrink: 0;
-object-fit: cover;
-  }
+}
 }

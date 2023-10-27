@@ -50,11 +50,14 @@ const ExhibitionsRail: React.FC = () => {
 };
 
 const ExhibitionCard: React.FC<{ exhibition: Exhibition }> = ({ exhibition }) => (
+    <div className="exhi-wrap">
   <div className="exhi-card">
+  
     <img src={exhibition.image_url} alt={exhibition.title} loading='lazy' />
     <div className="exhi-model">{exhibition.api_model}</div>
     <div className="exhi-title">{exhibition.title}</div>
     <div className="exhi-duration">{formatDateRange(exhibition.aic_start_at, exhibition.aic_end_at)}</div>
+  </div>
   </div>
 );
 

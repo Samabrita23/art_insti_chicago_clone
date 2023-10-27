@@ -1,10 +1,8 @@
 /* ExhibitionsRail.css */
 .exhibitions-rail {
-  padding: 1.4rem 4rem 1rem;
+  padding: 1.4rem 4rem 1rem 4rem; 
   display: flex;
   flex-direction: column;
-  margin: 0;
-  overflow-x: hidden;
 }
 
 .exhi-header {
@@ -19,14 +17,14 @@
   line-height: 1.75rem;
   letter-spacing: 0.11813rem;
   text-transform: uppercase;
-  padding-bottom: 2.5rem;
-  border-bottom: 1px solid  #E6E6E6;
+  padding-bottom: 1.5rem; /* Adjusted padding for smaller screens */
+  border-bottom: 1px solid #E6E6E6;
 }
 
 .all-exhibitions-button {
   color: #7E746D;
   background-color: #fff;
-  font-size: 0.97119rem;
+  font-size: 0.96rem; 
   font-style: normal;
   font-weight: 300;
   line-height: 1.75rem;
@@ -42,28 +40,34 @@
 .exhi-cards {
   display: flex;
   flex-direction: row; 
-  align-items: flex-start;
-  gap: 2rem; 
-  padding: 2rem 0 2rem 0;
+  justify-content: space-between;
+  padding: 1rem 4rem 1rem 0; 
+  gap: 4rem;
+  margin-right: 4rem;
+  overflow: hidden; 
+  
 }
 
 .exhi-card {
   display: flex;
   flex-direction: column;
+  flex: 1; 
+  max-width: 40rem;
   text-align: left;
   gap: 0.7rem;
-  border-right: 1px solid  #E6E6E6; 
-  padding-right: 1.5rem;
+  border-right: 1px solid #E6E6E6;
+  padding-right: 3.5rem;
 }
 
 .exhi-card img {
-  width: 38rem;
-  height: 23.4rem;
+  width: 40rem;
+ height: 20rem;
+
 }
 
-.exhi-card img:hover{
+.exhi-card img:hover {
   border-bottom: 4px solid grey;
-  margin-bottom: -4px; 
+  margin-bottom: -4px;
   cursor: pointer;
 }
 
@@ -85,10 +89,12 @@
   line-height: 2.5rem; /* 159.056% */
   letter-spacing: -0.00906rem;
 }
-.exhi-title:hover{
+
+.exhi-title:hover {
   color: grey;
   cursor: pointer;
 }
+
 .exhi-duration {
   color: #767676;
   font-size: 0.94631rem;
@@ -98,31 +104,26 @@
   letter-spacing: 0.01063rem;
 }
 
-
 /* Media Queries */
 @media (max-width: 768px) {
   .exhibitions-rail {
-    padding: 1.4rem 2rem 1rem;
+    padding: 1.4rem 1rem 1rem; /* Further adjusted padding for smaller screens */
   }
-
+  
   .exhi-header {
-   gap:1rem;
-    padding-bottom: 1.5rem;
+    gap: 0.5rem;
   }
 
   .exhi-cards {
     gap: 1rem;
-    padding: 1rem 2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .exhi-header {
-    gap: 0.5rem;
-    padding-bottom: 1rem;
+    padding: 1rem 1rem;
+    flex-direction: column;
   }
 
-  .all-exhibitions-button {
-    font-size: 0.8rem;
+  .exhi-card img{
+    width: 20rem;
+height: 10rem;
+flex-shrink: 0;
+object-fit: cover;
   }
 }

@@ -1,0 +1,120 @@
+/* Artworks.css */
+.artworks-container {
+    padding: 1rem 4rem;
+    background-color: white;
+    color: black ;
+}
+    
+  .artworks-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #1A1A1A;
+    padding-bottom: 3rem;
+    padding-top: 4rem;
+    border-top: 2px solid #E6E6E6;
+    border-bottom: 1px solid #E6E6E6;
+  }
+  
+  .artworks-heading {
+    color: #1A1A1A;
+    font-size: 1.3125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.75rem;
+    letter-spacing: 0.11813rem;
+    text-transform: uppercase;
+  }
+  
+  .explore-link {
+    color: #7E746D;
+    font-size: 0.97119rem;
+    text-decoration: none;
+  }
+  
+  .explore-link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .artwork-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(30%, 1fr));
+    /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .artwork-card {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 1rem;
+    border-right: 1px solid #E6E6E6;
+    border-bottom: 1px solid #E6E6E6;
+    text-decoration: none;
+  }
+ .artwork-card:last-child{
+    border: none;
+ }
+  .artwork-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    padding-bottom: 2rem;
+  }
+  .artwork-card img:hover{
+    cursor:pointer;
+
+  }
+  .artwork-title {
+    color: #1A1A1A;
+    font-family: Inter; 
+    font-size: 1.13281rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.75rem;
+  }
+  
+  .artist-title {
+    color: #767676;
+    font-size: 0.9795rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.75rem; 
+    letter-spacing: 0.01063rem;
+  }
+  
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .artworks-container {
+        padding: 1rem;
+    }
+
+    .artworks-header {
+        padding: 1rem;
+    }
+
+    .artwork-cards {
+        grid-template-columns: repeat(2, minmax(40%, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .artworks-container {
+        padding: 0.5rem;
+    }
+
+    .artworks-header {
+        padding: 0.5rem;
+    }
+
+    .artwork-cards {
+        grid-template-columns: repeat(1, minmax(20%, 1fr));
+    }
+}
+
+
+
+

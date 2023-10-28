@@ -22,15 +22,6 @@
     letter-spacing: 0.11813rem;
     text-transform: uppercase;
   }
-/*   
-  .highlights-header a {
-    color: #7E746D;
-    background-color: #fff;
-    text-decoration: none;
-    font-style: normal;
-    font-size: 0.97119rem;
-    border: none;
-  } */
 
   .highlight-cards {
     display: flex;

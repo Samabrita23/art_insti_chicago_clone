@@ -6,6 +6,7 @@ import ExhibitionsRail from "../Components/ExhibitionsRail";
 import Events from "../Components/Events";
 import Videos from "../Components/Videos";
 import Highlights from "../Components/Highlights";
+import Blogs from "../Components/Blogs";
 
 const Homepage = () => {
   return (
@@ -15,6 +16,7 @@ const Homepage = () => {
   <Events/>
   <Videos/>
   <Highlights/>
+  <Blogs/>
   <Footer/>
   </>
   );

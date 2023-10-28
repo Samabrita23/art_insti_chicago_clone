@@ -1,0 +1,82 @@
+/* Blogs.css */
+.blogs-container {
+    padding: 1rem 4rem;
+    background-color: white;
+    color: black;
+  }
+  
+  .blogs-header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #E6E6E6;
+  }
+  
+  .blogs-heading {
+    color: #1A1A1A;
+    font-size: 1.3125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.75rem;
+    letter-spacing: 0.11813rem;
+    text-transform: uppercase;
+  }
+ 
+  .columns {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+  
+  .column {
+    flex: 1;
+    align-items: flex-start;
+    padding-right: 1rem;
+    border-right: 1px solid #ccc;
+  }
+  .column:last-child{
+    border-right: none;
+  }
+  .column1 {
+    flex: 3;
+    
+  }
+  
+  .blog-card {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+  }
+  .blog-card:last-child{
+    border:none;
+  }
+  .blog-card img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    padding-bottom: 3rem;
+  }
+  .blog-api-model {
+    color: #7E746D;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1rem;
+    letter-spacing: 0.105rem;
+    text-transform: uppercase;
+    padding-bottom: 0.5rem;
+  }
+
+  .blog-title {
+    color: #1A1A1A;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.35938rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2rem;
+    letter-spacing: -0.0075rem;
+  }
+  
+  

@@ -13,7 +13,7 @@ function App() {
       <Routes>
   <Route path="/" element={<Homepage />} />
   <Route path="/exhibitions" element={<ExhibitionsRail />} />
-  <Route path="/detail/:id" element={<DetailPage />} />
+  <Route path="/:api_model/:id" element={<DetailPage />} />
 </Routes>
 
       </div>

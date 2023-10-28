@@ -4,6 +4,7 @@ import HomepageHeader from "../Components/HomepageHeader";
 import Footer from "../Components/Footer";
 import ExhibitionsRail from "../Components/ExhibitionsRail";
 import Events from "../Components/Events";
+import Videos from "../Components/Videos";
 
 const Homepage = () => {
   return (
@@ -11,6 +12,7 @@ const Homepage = () => {
   <HomepageHeader />
   <ExhibitionsRail/>
   <Events/>
+  <Videos/>
   <Footer/>
   </>
   );

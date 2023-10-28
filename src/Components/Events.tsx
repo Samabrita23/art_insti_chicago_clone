@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import axios, { AxiosResponse } from 'axios';
 import { Link } from 'react-router-dom';
 import { formatDateRange } from './Common';
+import "../Styles/Events.css";
 
 // Interface defining the structure of event data
 interface EventData {
@@ -32,11 +33,11 @@ const Events: React.FC = () => {
 
       <div className="event-cards">
         {events.map((event) => (
-          <Link key={event.id} to={`/event-detail/${event.id}`} className="event-card-link">
+          <Link key={event.id} to={`/${event.api_model}/${event.id}`} className="event-card-link">
             <div className="event-card">
               <img src={event.image_url} alt={event.title} loading="lazy" />
               <div className="event-title">{event.title}</div>
-              <div className="event-time">{formatDateRange(event.start_time, event.end_time)}</div>
+              <div className="event-time">Thursdays - Mondays | {event.start_time}- {event.end_time}</div>
             </div>
           </Link>
         ))}

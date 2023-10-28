@@ -1,9 +1,8 @@
 /* Events.css */
 .events-container {
-    padding: 3rem 4rem;
+    padding: 0.5rem 4rem;
     display: flex;
     flex-direction: column;
-    border-top:1px solid #E6E6E6 ;
   }
   
   .events-header {

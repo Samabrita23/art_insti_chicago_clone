@@ -23,7 +23,7 @@ const Events: React.FC = () => {
       .then((response: AxiosResponse<{ data: EventData[] }>) => setEvents(response.data.data.slice(0, 4)))
       .catch((error) => console.error('Error fetching events:', error));
   }, []);
-
+  
   return (
     <div className="events-container">
       <div className="events-header">

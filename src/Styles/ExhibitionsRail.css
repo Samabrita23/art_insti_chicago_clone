@@ -1,6 +1,6 @@
 /* ExhibitionsRail.css */
 .exhibitions-rail {
-  padding: 1.4rem 4rem 4rem 4rem; 
+  padding: 1.4rem 4rem 3rem 4rem; 
   display: flex;
   flex-direction: column;
 }
@@ -44,6 +44,8 @@
   padding: 1rem 0 1rem 0; 
   gap: 4rem;
   overflow: hidden; 
+  padding-bottom: 7rem;;
+  border-bottom:1px solid #E6E6E6 ;
 }
  
 .exhi-wrap{
@@ -131,8 +133,6 @@
   border-right:none;
   border-bottom: 1px solid #E6E6E6;
 }
-
-
   .exhi-card img{
     width: 20rem;
 height: 10rem;

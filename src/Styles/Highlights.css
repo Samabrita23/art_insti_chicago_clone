@@ -1,0 +1,105 @@
+/* Highlights.css */
+.highlights-container {
+    padding: 3rem 4rem;
+    background-color: white;
+    color: black;
+  }
+  
+  .highlights-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #1A1A1A;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #E6E6E6;;
+  }
+  .highlights-heading{
+    color: #1A1A1A;
+    font-size: 1.3125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.75rem;
+    letter-spacing: 0.11813rem;
+    text-transform: uppercase;
+  }
+/*   
+  .highlights-header a {
+    color: #7E746D;
+    background-color: #fff;
+    text-decoration: none;
+    font-style: normal;
+    font-size: 0.97119rem;
+    border: none;
+  } */
+
+  .highlight-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 2rem 0;
+  }
+
+  .highlight-cards link{
+    text-decoration: none;
+  }
+  
+  .highlight-card {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    overflow: hidden;
+    text-decoration: none;
+    gap: 1rem;
+    border-right: 1px solid #E6E6E6;
+    padding: 1rem;
+  }
+  
+  .highlight-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .highlights-model{
+    color: #7E746D;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1rem; 
+    letter-spacing: 0.105rem;
+    text-transform: uppercase;
+  }
+  .highlights-title {
+    color: #1A1A1A;
+    font-family: Inter;
+    font-size: 1.35938rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2rem; /* 147.126% */
+     letter-spacing: -0.0075rem;
+  }
+  
+/* Media Queries */
+@media (max-width: 768px) {
+    .highlights-container {
+      padding: 3rem 2rem;
+    }
+  
+    .highlight-card {
+      width: calc(50% - 1rem); /* Adjust width for 2 cards in a row with gap */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .highlight-cards {
+      flex-direction: column;
+    }
+  
+    .highlight-card {
+      width: 100%; /* Full width for single column on smaller screens */
+      border-right: none; /* Remove right border for single column */
+      margin-bottom: 1rem; /* Add some space between cards */
+    }
+  }
+
+  

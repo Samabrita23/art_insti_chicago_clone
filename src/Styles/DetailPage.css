@@ -1,0 +1,28 @@
+/* DetailPage.css */
+.detail-container {
+    display: flex;
+    background-color: #fff;
+  }
+  .detail-wrap{
+    display: flex;
+    flex-direction: column;
+  }
+  .image-wrap{
+    display: flex;
+    flex-direction: column;
+  }
+  .image-container {
+    background-color: #F3F3F3;
+    padding: 20px;
+  }
+  
+  .image-container img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .details {
+    padding: 20px;
+  }
+  

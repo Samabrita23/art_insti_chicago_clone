@@ -1,0 +1,152 @@
+
+.top-head{
+    background: #FFF;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding-bottom: 1rem;
+}
+  
+  .header-wrap{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.4rem 0 2rem;
+    border-bottom: 1px solid #E6E6E6;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    gap:1rem;
+  }
+  
+  .logo {
+    max-width: 8rem;
+    max-height: 8rem; 
+  }
+  
+  .header-nav{
+    display: flex;
+    flex-direction: column;
+    gap: 3.3rem;
+    color: black;
+    font-weight: 300;
+  }
+  
+
+  .secondary-nav{
+    text-decoration: none;
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  
+  .primary-nav{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.4rem;
+    font-size: 18.5px;
+  }
+
+  .top-head .primary-nav a {
+    text-decoration: none;
+    letter-spacing: 0.05rem;
+    color: #1A1A1A;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.75rem; 
+    letter-spacing: 0.01781rem;
+  }
+  
+
+.top-head .secondary-nav a {
+    color: #767676;
+    font-size: 16.5px;
+    font-style: normal;
+    line-height: 1.75rem; 
+    letter-spacing: 0.01063rem;
+  text-decoration: none;
+}
+
+.top-head .primary-nav,
+.top-head .secondary-nav {
+  margin-left: auto;
+}
+
+
+.search {
+    font-size: 1rem;
+    color: #1A1A1A;
+    cursor: pointer;
+  }
+  
+  .secondary-nav a:hover,
+  .primary-nav a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.scrolled-up .header-wrap {
+  background: white; 
+  border-bottom: 1px solid #e2e2e2;
+}
+
+
+
+@media (max-width: 768px) {
+    .header-wrapper {
+      padding: 1.4rem 2rem 0; 
+    }
+  
+    .logo {
+      max-width: 6rem;
+      max-height: 6rem; 
+    }
+
+    
+    .primary-navbar,
+    .secondary-navbar {
+      padding-left: 4rem;
+      gap: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header-wrap {
+      padding: 1.4rem 1rem 0; 
+    }
+  
+    .logo {
+      max-width: 4rem;
+      max-height: 4rem; 
+    }
+    .header-nav{
+      gap: 1rem;
+    }
+    
+    .primary-nav,
+    .secondary-nav {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start; 
+    }
+  
+    .search{
+      margin-left: 3rem;
+    }
+  
+    .primary-nav a:not(:first-child),
+    .secondary-nav a:not(:first-child) {
+      display: none; /*To Hide all elements except the first one */
+    }
+  
+    .primary-nav a,
+    .secondary-nav a {
+      flex: 1 1 100%; 
+    }
+  }
+  
+  

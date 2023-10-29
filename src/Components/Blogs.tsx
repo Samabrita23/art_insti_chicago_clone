@@ -29,21 +29,21 @@ const Blogs: React.FC = () => {
         <div className="blogs-heading">BLOG</div>
         <Link to="/browse" className="see-more-link">Browse all articles ›</Link>
       </div>
-
+      
       <div className="columns">
         <div className="column column1">
           {blogs.length > 0 && (
-            <Link to={`/details/${blogs[0].api_model}`} className="blog-card">
+            <Link to={`/${blogs[0].api_model}/${blogs[0].id}`} key={blogs[0].id} className="blog-card">
               <img src={blogsImage} alt={blogs[0].title} loading='lazy' />
               <div className="blog-api-model">{blogs[0].api_model}</div>
               <div className='blog-title'>{blogs[0].title}</div>
             </Link>
           )}
         </div>
-
+        
         <div className="column column2">
           {blogs.slice(1, 3).map(blog => (
-            <Link key={blog.api_model} to={`/details/${blog.api_model}`} className="blog-card">
+            <Link to={`/${blog.api_model}/${blog.id}`} key={blog.id} className="blog-card">
               <img src={blogsImage} alt={blog.title} loading='lazy' />
               <div className="blog-api-model">{blog.api_model}</div>
               <div className="blog-title">{blog.title}</div>
@@ -53,7 +53,7 @@ const Blogs: React.FC = () => {
 
         <div className="column column3">
           {blogs.slice(3, 5).map(blog => (
-            <Link key={blog.api_model} to={`/details/${blog.api_model}`} className="blog-card">
+            <Link to={`/${blog.api_model}/${blog.id}`} key={blog.id} className="blog-card">
               <img src={blogsImage} alt={blog.title} loading='lazy' />
               <div className="blog-api-model">{blog.api_model}</div>
               <div className='blog-title'>{blog.title}</div>
@@ -66,24 +66,4 @@ const Blogs: React.FC = () => {
 };
 
 export default Blogs;
-//   return (
-//     <div className="blogs-container">
-//       <div className="blogs-header">
-//         <div className="blogs-heading">BLOG</div>
-//         <Link to="/browse-all-articles" className="see-all-link">Browse all articles ›</Link>
-//       </div>
 
-//       <div className="blog-cards">
-//         {blogs.map((blog, index) => (
-//           <Link to={`/${blog.api_model}/${blog.id}`} key={blog.id} className={`blog-card ${index === 0 ? 'column-1' : 'column-2-3'}`}>
-//             <img src={blogsImage} alt={blog.title} loading="lazy" />
-//             <div className="blog-api-model">{blog.api_model}</div>
-//             <div className="blog-title">{blog.title}</div>
-//           </Link>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Blogs;

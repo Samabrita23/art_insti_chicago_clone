@@ -2,10 +2,11 @@
 .detail-container {
     display: flex;
     background-color: #fff;
-  }
+}
   .detail-wrap{
     display: flex;
     flex-direction: column;
+    width: 100%;
   }
   .image-wrap{
     display: flex;
@@ -22,7 +23,209 @@
     object-fit: cover;
   }
   
-  .details {
+
+.columns-detail {
+    display: flex;
+    padding: 1rem 4rem;
+  }
+  .column1 {
+    flex: 1;
     padding: 20px;
+    margin-right: 20px;
+    color: #7E746D;
+    font-size: 0.94631rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.75rem; /* 184.933% */
+    letter-spacing: 0.01063rem;
+    text-align: left;
+    border-top: 1px solid #E6E6E6;
+  }
+
+  .on-view{
+    color: #1A1A1A;
+    text-decoration: none;
+    font-size: 0.98781rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem; /* 151.854% */
+    letter-spacing: 0.01063rem;
+    padding-bottom: 1rem;
   }
   
+  .column2{
+    flex:2;
+    padding: 20px;
+    margin-right: 20px;
+    flex-wrap: wrap;
+    color: #7E746D;
+    border-top: 1px solid #E6E6E6;
+    text-align: left;
+  }
+
+  .det-title{
+    color: #1A1A1A;
+    font-family: Inter;
+    font-size: 3rem;
+    font-style: normal;
+    line-height: 2.75rem; 
+    letter-spacing: 0.02rem;
+    padding-bottom: 2rem;
+  }
+
+  .det-start{
+    color: #767676;
+    font-size: 0.95456rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.75rem; /* 183.325% */
+    letter-spacing: 0.01063rem;
+    padding-bottom: 1rem;;
+  }
+
+  .det-artist{
+    color: #767676;
+    font-size: 0.95456rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.75rem; 
+    letter-spacing: 0.01063rem;
+    padding-bottom: 1rem;
+  }
+  .det-description{
+    color: #333;
+    font-size: 1.04831rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.75rem; 
+    letter-spacing: 0.01188rem;
+    padding-bottom: 1rem;
+  }
+  .details-table-container {
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    padding-bottom: 3rem;
+  }
+  
+  .details-table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 0.99613rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem; /* 150.588% */
+    letter-spacing: 0.01063rem;
+  }
+  
+  .details-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+
+  }
+
+  .details-table td:first-child {
+    color: #1A1A1A;
+  }
+  
+/* PUBLICATION HISTORY, EXHIBITION HISTORY, PROVENANCE styles */
+.det-publication,
+.det-exhibition,
+.det-provenance {
+    cursor: pointer;
+    color: #1A1A1A;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #E6E6E6;
+}
+
+.publication-header,
+.exhibition-header,
+.provenance-header {
+    margin-right: 1rem;
+    padding: 1.5rem 0 1.5rem;
+    color: #1A1A1A;
+    font-size: 1.3125rem;
+    line-height: 1.75rem;
+    letter-spacing: 0.11813rem;
+    text-transform: uppercase;
+}
+
+.det-publication span:last-child,
+.det-exhibition span:last-child,
+.det-provenance span:last-child {
+    margin-left: auto;
+}
+
+.det-publication.expanded .publication-header::after,
+.det-exhibition.expanded .exhibition-header::after,
+.det-provenance.expanded .provenance-header::after {
+    content: '';
+    display: inline-block;
+    width: 1rem;
+}
+
+.det-content {
+    margin-top: 1rem;
+    color: #333;
+    font-size: 1.04831rem;
+    font-weight: 300;
+    line-height: 1.75rem;
+    letter-spacing: 0.01188rem;
+}
+
+.column3 {
+    flex: 1;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .columns-detail {
+        padding: 1rem;
+    }
+
+    .column2 {
+        padding: 10px;
+       
+    }
+
+
+    .det-publication,
+    .det-exhibition,
+    .det-provenance {
+        font-size: 0.9rem;
+        line-height: 1.3rem;
+    }
+
+    .publication-header,
+    .exhibition-header,
+    .provenance-header {
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .details-table {
+        font-size: 0.8rem;
+    }
+
+    .det-publication,
+    .det-exhibition,
+    .det-provenance {
+        font-size: 0.8rem;
+        line-height: 1.2rem;
+    }
+
+    .publication-header,
+    .exhibition-header,
+    .provenance-header {
+        font-size: 1rem;
+        line-height: 1.3rem;
+        flex-wrap: wrap;
+    }
+}

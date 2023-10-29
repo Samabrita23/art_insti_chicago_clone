@@ -61,12 +61,12 @@ const HomepageHeader = () => {
                 <a href="#Become a member">Become a member</a>
                 <a href="#Shop">Shop</a>
               </div>
-
+              
               {/* Primary navigation links with search icon */}
               <div className="primary-navbar">
                 <a href="#Visit">Visit</a>
                 <a href="#Exhibitions & Events">Exhibitions & Events</a>
-                <a href="#The Collection">The Collection</a>
+                <a href="/collection">The Collection</a>
                 <FaSearch className="search-icon" />
               </div>
             </div>

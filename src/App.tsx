@@ -5,6 +5,7 @@ import './App.css';
 import Homepage from './Pages/Homepage';
 import ExhibitionsRail from './Components/ExhibitionsRail';
 import DetailPage from './Pages/DetailPage';
+import CollectionsPage from './Pages/CollectionsPage';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <div className="App">
       <Routes>
   <Route path="/" element={<Homepage />} />
+  <Route path="/collection" element={<CollectionsPage />} />
   <Route path="/exhibitions" element={<ExhibitionsRail />} />
   <Route path="/:api_model/:id" element={<DetailPage />} />
 </Routes>

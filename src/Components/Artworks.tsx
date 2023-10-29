@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../Styles/Artworks.css';
 
-interface Artwork {
+interface artworkRail {
  api_model:string;
   id: number;
   image_id: string;
@@ -11,7 +11,7 @@ interface Artwork {
 }
 
 const Artworks: React.FC = () => {
-  const [artworks, setArtworks] = useState<Artwork[]>([]);
+  const [artworks, setArtworks] = useState<artworkRail[]>([]);
 
   useEffect(() => {
     // Fetch artworks from API
@@ -29,17 +29,17 @@ const Artworks: React.FC = () => {
           Explore the collection ›
         </Link>
       </div>
-
+      
       <div className="artwork-cards">
-        {artworks.map((artwork) => (
-          <Link to={`/${artwork.api_model}/${artwork.id}`} key={artwork.id} className="artwork-card">
+        {artworks.map((artworkRail) => (
+          <Link to={`/${artworkRail.api_model}/${artworkRail.id}`} key={artworkRail.id} className="artwork-card">
             <img
-              src={`https://www.artic.edu/iiif/2/${artwork.image_id}/full/843,/0/default.jpg`}
-              alt={artwork.title}
+              src={`https://www.artic.edu/iiif/2/${artworkRail.image_id}/full/843,/0/default.jpg`}
+              alt={artworkRail.title}
               loading='lazy'
             />
-            <div className="artwork-title">{artwork.title}</div>
-            <div className="artist-title">{artwork.artist_title}</div>
+            <div className="artwork-title">{artworkRail.title}</div>
+            <div className="artist-title">{artworkRail.artist_title}</div>
           </Link>
      
         ))}

@@ -7,8 +7,9 @@
     width: 100%;
     height: auto;
     padding-bottom: 1rem;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
 }
-  
+
   .header-wrap{
     display: flex;
     flex-direction: row;
@@ -19,7 +20,16 @@
     margin-left: 4rem;
     margin-right: 4rem;
     gap:1rem;
+    opacity: 1;
+  transition: opacity 0.3s ease;
   }
+
+  .scrolled-up {
+    background: white;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
   
   .logo {
     max-width: 8rem;

@@ -12,7 +12,7 @@ interface Highlight {
   
   const Highlights: React.FC = () => {
     const [highlights, setHighlights] = useState<Highlight[]>([]);
-  
+    
     useEffect(() => {
       // Fetch highlights from API
       fetch('https://api.artic.edu/api/v1/highlights')

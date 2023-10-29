@@ -1,0 +1,67 @@
+.collections-container{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 2rem 4rem;
+}
+.collections-heading{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 3rem;
+}
+
+.collections-head{
+    color: #1A1A1A; 
+    font-size: 2.5rem;
+     font-style: normal;
+     font-weight: 300;
+     line-height: 2.75rem;
+     letter-spacing: 0.18rem;
+     padding-top: 1.5rem;
+     padding-bottom: 2rem;
+     border-bottom: 1px solid #E6E6E6;
+}
+
+.collections-description{
+    color: #949494;
+    font-family: Inter;
+    font-size: 1.55175rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.25rem; 
+    letter-spacing: -0.00875rem;
+    padding-bottom: 2rem;
+}
+
+.tabs-container {
+    display: flex;
+    align-items: self-start;
+    flex-direction: row;
+    gap: 3rem;
+    margin-top: 2rem;
+  }
+  
+  .tab {
+    cursor: pointer;
+    padding: 1rem 0 1rem 0;
+    background-color: white;
+    color:#949494;
+    font-size: 1.3125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.75rem; 
+    letter-spacing: 0.11813rem;
+  }
+  
+  .tab.active {
+    color: #1A1A1A;
+    border-bottom: 1px solid  #B50938;
+  }
+  
+  .tab-content {
+    margin-top: 2rem;
+    margin-left:-4rem;
+
+  }
+ 

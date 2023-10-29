@@ -32,14 +32,16 @@ letter-spacing: 0.01063rem;
 .search-icons {
   border-color:#F3F3F3;  
   border-radius: 0rem 0.125rem 0.125rem 0rem;
-background: #767676;
+  background: #767676;
   cursor: pointer;
   width: 4rem;
 height: 4rem;
   color: #fff;
 }
 
-/* Tabs */
+.tab-container {
+  overflow-x: auto;
+}
 .tab-row {
   display: flex;
   gap: 1rem;
@@ -48,19 +50,33 @@ height: 4rem;
 
 .tab-item {
   cursor: pointer;
-  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  padding: 0.2rem;
+  gap: 0.5rem;
   background-color: #fff;
-  color: #1A1A1A;
-  border: 1px solid #1A1A1A;
+  border-radius: 0.125rem;
+  border: 1px solid #E6E6E6;
+  color: #767676;
+  font-size: 0.65rem;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.105rem;
+  text-transform: uppercase;
 }
 
-.tab-item.active {
-  background-color: #1A1A1A;
-  color: #fff;
+.tab-item:hover{
+  border: 1px solid black;
 }
+.tab-item.active {
+  background-color: black;
+  color: white;
+}
+
 
 /* Filter Options */
 .filter-options {
+  padding-top: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -69,15 +85,45 @@ height: 4rem;
 
 .show-filters {
   cursor: pointer;
+  display: flex;
+  align-items: center; 
   background-color: #fff;
-  border: 1px solid #1A1A1A;
-  padding: 0.5rem 1rem;
+  border: 1px solid #fff;
+  padding: 0.5rem 0;
+  color: #7E746D;
+  font-size: 0.95456rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.75rem;
+  letter-spacing: 0.01063rem;
 }
 
 .checkbox-and-buttons {
   display: flex;
-  gap: 1rem;
+  gap: 0.2rem;
+  color: #7E746D;
+text-align: center;
+font-size: 0.95456rem;
+font-style: normal;
+font-weight: 300;
+line-height: 1.75rem; /* 183.325% */
+letter-spacing: 0.01063rem;
 }
+.all-results{
+  color: #7E746D;
+border: none;
+padding-left: 1rem;
+background-color: white;
+text-align: center;
+font-family: Inter;
+font-size: 0.95456rem;
+font-style: normal;
+font-weight: 300;
+line-height: 1.75rem; /* 183.325% */
+letter-spacing: 0.01063rem;
+}
+
+
 
 /* Artwork Cards */
 .artwork-cards {

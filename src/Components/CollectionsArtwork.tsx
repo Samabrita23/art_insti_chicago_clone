@@ -3,6 +3,17 @@
 import React, { useState, useEffect } from 'react';
 import CollectionCard from './CollectionCard';
 import '../Styles/CollectionsArtwork.css';
+import CityscapeIcons from "../Assets/CityscapeIcons.jpg.svg"
+import ImpressionismIcon from "../Assets/ImpressionismIcon.jpg.svg";
+import AnimalsIcon from "../Assets/AnimalsIcon.jpg.svg";
+import EssentialsIcon from "../Assets/EssentialsIcon.jpg.svg";
+import AfricanDiasporaIcon from "../Assets/AfricanDiasporaIcon.jpg.svg";
+import FashionIcon from "../Assets/FashionIcon.jpg.svg";
+import ChicagoArtistsIcon from "../Assets/ChicagoArtistsIcon.jpg.svg";
+import PopArtIcon from "../Assets/PopArtIcon.jpg.svg";
+import MythologyIcon from "../Assets/MythologyIcon.jpg.svg";
+import FilterIcon from "../Assets/FilterIcon.svg"
+
 
 interface Artwork {
   image_id: string;
@@ -16,6 +27,24 @@ interface ArtworksResponse {
     results: Artwork[];
   };
 }
+
+interface TabItem {
+  title: string;
+  icon: JSX.Element;
+}
+
+const getTabsList = (): TabItem[] => [
+  { title: 'Cityscapes', icon: <img src={CityscapeIcons} alt="Cityscapes Icon" /> },
+  { title: 'Impressionism', icon: <img src={ImpressionismIcon} alt="Impressionism Icon" /> },
+  { title: 'Animals', icon: <img src={AnimalsIcon} alt="Animals Icon" /> },
+  { title: 'Essentials', icon: <img src={EssentialsIcon} alt="Essentials Icon" /> },
+  { title: 'African Diaspora', icon: <img src={AfricanDiasporaIcon} alt="African Diaspora Icon" /> },
+  { title: 'Fashion', icon: <img src={FashionIcon} alt="Fashion Icon" /> },
+  { title: 'Chicago Artists', icon: <img src={ChicagoArtistsIcon} alt="Chicago Artists Icon" /> },
+  { title: 'Pop Art', icon: <img src={PopArtIcon} alt="Pop Art Icon" /> },
+  { title: 'Mythology', icon: <img src={MythologyIcon} alt="Mythology Icon" /> },
+];
+
 
 const CollectionsArtwork: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -84,23 +113,32 @@ const CollectionsArtwork: React.FC = () => {
       </div>
       
       {/* Tabs */}
+      <div className='tab-container'>
       <div className="tab-row">
-        {/* Add your tab components here */}
-        {/* Example: */}
-        <div
-          className={`tab-item ${activeTab === 'Cityscapes' ? 'active' : ''}`}
-          onClick={() => handleTabClick('Cityscapes')}
-        >
-          Cityscapes
-        </div>
-        {/* Repeat for other tabs */}
+        {getTabsList().map((tab) => (
+          <div
+            key={tab.title}
+            className={`tab-item ${activeTab === tab.title ? 'active' : ''}`}
+            onClick={() => handleTabClick(tab.title)}
+          >
+            {tab.icon}
+            {tab.title}
+          </div>
+        ))}
       </div>
-
+      </div>
+      
       {/* Filter Options */}
       <div className="filter-options">
         <button className="show-filters">
-          {/* Add your show filters icon or text here */}
-          Show Filters
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+        <path d="M16 8.58002H20V9.58002H16V8.58002ZM4 8.58002H13V9.58002H4V8.58002Z" fill="#7E746D"/>
+        <path d="M14.5 11.08C15.6046 11.08 16.5 10.1846 16.5 9.08002C16.5 7.97545 15.6046 7.08002 14.5 7.08002C13.3954 7.08002 12.5 7.97545 12.5 9.08002C12.5 10.1846 13.3954 11.08 14.5 11.08Z" stroke="#7E746D" stroke-miterlimit="10"/>
+        <path d="M8 16.58H4V15.58H8V16.58ZM20 16.58H11V15.58H20V16.58Z" fill="#7E746D"/>
+        <path d="M9.5 18.08C10.6046 18.08 11.5 17.1846 11.5 16.08C11.5 14.9754 10.6046 14.08 9.5 14.08C8.39543 14.08 7.5 14.9754 7.5 16.08C7.5 17.1846 8.39543 18.08 9.5 18.08Z" stroke="#7E746D" stroke-miterlimit="10"/>
+         </svg>
+       
+         Show Filters
         </button>
         <div className="checkbox-and-buttons">
           <input

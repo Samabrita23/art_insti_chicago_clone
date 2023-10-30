@@ -1,0 +1,73 @@
+/* Pagination.css */
+.pagination-container {
+    display: flex;
+    justify-content: space-between; 
+    border-top: 1px solid #E6E6E6;
+    align-items: center;
+    margin-top: 20px;
+    color: #1A1A1A;
+    text-align: center;
+font-family: Inter;
+font-size: 1.00438rem;
+font-style: normal;
+font-weight: 400;
+line-height: 3rem;
+letter-spacing: 0.01063rem;
+  }
+  
+  /* .pagination-button {
+    margin: 0;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+  }
+   */
+  .pagination-button-prev {
+    margin-right: auto; /* Push Prev button to the left */
+    border: none;
+    background-color: white;
+  }
+  
+  .pagination-button-next {
+    margin-left: auto; /* Push Next button to the right */
+    border: none;
+    background-color: white;
+  }
+
+  .pagination-button-next button :active{
+    border: none;
+    background-color: white;
+    color:#1A1A1A;
+    border-left: 1px solid black;
+  }
+  
+  .pagination-button:disabled {
+    background-color: #ccc;
+    border: none;
+    cursor: not-allowed;
+  }
+  
+.page-numbers {
+    display: flex;
+    gap: 5px;
+    border: none;
+  }
+  
+  .page-numbers button {
+    padding: 1rem;
+    background-color: white;
+    border-bottom: none;
+    border-left: 1px solid #E6E6E6;
+    border-right: 1px solid #E6E6E6;
+    border-top: 1px solid #E6E6E6;
+
+  }
+  
+  .page-numbers button.active {
+    border-top: 1px solid red; /* Red top border for the active page number */
+    background-color: white;
+  }
+  

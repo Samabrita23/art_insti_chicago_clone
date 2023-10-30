@@ -12,7 +12,8 @@ import FashionIcon from "../Assets/FashionIcon.jpg.svg";
 import ChicagoArtistsIcon from "../Assets/ChicagoArtistsIcon.jpg.svg";
 import PopArtIcon from "../Assets/PopArtIcon.jpg.svg";
 import MythologyIcon from "../Assets/MythologyIcon.jpg.svg";
-import FilterIcon from "../Assets/FilterIcon.svg"
+import Pagination from './Pagination';
+
 
 
 interface Artwork {
@@ -54,21 +55,26 @@ const CollectionsArtwork: React.FC = () => {
   const [totalPages, setTotalPages] = useState(1);
   const [artworks, setArtworks] = useState<Artwork[]>([]);
 
-  // Fetch artworks from the API based on the active tab and search query
   const fetchArtworks = async () => {
-    // Use your API endpoint here
-    const apiUrl = `https://api.artic.edu/api/v1/artworks?tab=${activeTab}&q=${searchQuery}&page=${currentPage}&limit=50`;
-
+    const apiUrl = `https://api.artic.edu/api/v1/artworks?page=${currentPage}&limit=50`;
+  
     try {
       const response = await fetch(apiUrl);
-      const data: ArtworksResponse = await response.json();
-      setArtworks(data.data.results);
-      setTotalPages(data.data.total_pages);
+      const data = await response.json();
+  
+      if (data && data.data && Array.isArray(data.data)) {
+        // Update the state based on the actual API response structure
+        setArtworks(data.data);
+        setTotalPages(data.pagination.total_pages);
+      } else {
+        console.error('Unexpected API response format:', data);
+      }
     } catch (error) {
       console.error('Error fetching artworks:', error);
     }
   };
-
+  
+  
   // Handle tab click
   const handleTabClick = (tab: string) => {
     setActiveTab(tab);
@@ -153,8 +159,8 @@ const CollectionsArtwork: React.FC = () => {
       </div>
 
       {/* Artwork Cards */}
+
       <div className="artwork-cards">
-        {/* Map through artworks and render CollectionCard component */}
         {artworks && artworks.map((artwork) => (
           <CollectionCard
             key={artwork.image_id}
@@ -165,21 +171,15 @@ const CollectionsArtwork: React.FC = () => {
         ))}
       </div>
 
-      {/* Pagination */}
-      <div className="pagination">
-        {/* Add your pagination component here */}
-        {/* Example: */}
-        {Array.from({ length: totalPages }, (_, index) => (
-          <button
-            key={index + 1}
-            className={currentPage === index + 1 ? 'active' : ''}
-            onClick={() => handlePageChange(index + 1)}
-          >
-            {index + 1}
-          </button>
-        ))}
-      </div>
+
+     {/* Pagination */}
+     <Pagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPageChange={handlePageChange}
+      />
     </div>
+  
   );
 };
 

@@ -1,7 +1,7 @@
 // CollectionCard.tsx
 
 import React from 'react';
-import '../Styles/CollectionCard.css';
+import '../Styles/Artworks.css';
 
 interface CollectionCardProps {
   imageId: string;
@@ -11,19 +11,20 @@ interface CollectionCardProps {
 
 const CollectionCard: React.FC<CollectionCardProps> = ({ imageId, title, artistTitle }) => {
   return (
-    <div className="collection-card">
+    <div className='artwork-card'>
       {/* Image */}
       <img
-        src={`https://www.example.com/images/${imageId}.jpg`} // Replace with your actual image URL or use your image processing logic
+        src={`https://www.artic.edu/iiif/2/${imageId}/full/843,/0/default.jpg`} // Replace with your actual image URL or use your image processing logic
         alt={title}
         className="card-image"
+        loading='lazy'
       />
 
       {/* Title */}
-      <div className="card-title">{title}</div>
+      <div className="artwork-title">{title}</div>
 
       {/* Artist */}
-      <div className="card-artist">{artistTitle}</div>
+      <div className="artist-title">{artistTitle}</div>
     </div>
   );
 };

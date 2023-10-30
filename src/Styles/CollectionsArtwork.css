@@ -81,6 +81,7 @@ height: 4rem;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
+  border-bottom: 1px solid #E6E6E6;;
 }
 
 .show-filters {
@@ -132,11 +133,6 @@ letter-spacing: 0.01063rem;
   gap: 1rem;
 }
 
-/* Collection Card */
-.collection-card {
-  border: 1px solid #E6E6E6;
-  padding: 1rem;
-}
 
 /* Pagination */
 .pagination {

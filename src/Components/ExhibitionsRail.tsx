@@ -53,7 +53,9 @@ const ExhibitionCard: React.FC<{ exhibition: Exhibition }> = ({ exhibition }) =>
   <div className="exhi-wrap">
     <div className="exhi-card">
       {/* Display exhibition card details */}
-      <img src={exhibition.image_url} alt={exhibition.title} loading='lazy' />
+      <img src={exhibition.image_url ||
+       'https://artic-web.imgix.net/7b38c611-392c-422d-8eea-53be80ac65cd/EighthBlackbirdSaverioTruglia.jpg?rect=0%2C525%2C3204%2C1800&auto=format%2Ccompress&q=80&fit=crop&crop=faces%2Ccenter&w=1200&h=674'} 
+      alt={exhibition.title} loading='lazy' />
       <div className="exhi-model">{exhibition.api_model}</div>
       <div className="exhi-title">{exhibition.title}</div>
       <div className="exhi-duration">{formatDateRange(exhibition.aic_start_at, exhibition.aic_end_at)}</div>

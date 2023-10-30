@@ -64,4 +64,43 @@
     margin-left:-4rem;
 
   }
- 
+  
+/* Media Query for max-width: 768px */
+@media (max-width: 768px) {
+  .collections-container {
+      padding: 2rem;
+  }
+
+  .tabs-container {
+      flex-direction: row;
+      font-size: 0.2rem;
+  }
+
+  .tab {
+      padding: 1rem;
+      text-align: center;
+  }
+
+  .tab-content {
+      margin-left: 0;
+  }
+}
+
+/* Media Query for max-width: 480px */
+@media (max-width: 480px) {
+  .collections-container {
+      padding: 1rem;
+  }
+
+  .collections-head {
+      font-size: 2rem;
+  }
+
+  .collections-description {
+      font-size: 1.25rem;
+  }
+
+  .tab {
+      font-size: 1rem;
+  }
+}

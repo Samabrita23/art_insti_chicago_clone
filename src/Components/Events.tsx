@@ -30,12 +30,14 @@ const Events: React.FC = () => {
         <div>EVENTS</div>
         <button className="see-more-link">See upcoming events ›</button>
       </div>
-
+      
       <div className="event-cards">
         {events.map((event) => (
           <Link key={event.id} to={`/${event.api_model}/${event.id}`} className="event-card-link">
             <div className="event-card">
-              <img src={event.image_url} alt={event.title} loading="lazy" />
+              <img src={event.image_url ||
+               'https://artic-web.imgix.net/7b38c611-392c-422d-8eea-53be80ac65cd/EighthBlackbirdSaverioTruglia.jpg?rect=0%2C525%2C3204%2C1800&auto=format%2Ccompress&q=80&fit=crop&crop=faces%2Ccenter&w=1200&h=674'}
+                 alt={event.title} loading="lazy" />
               <div className="event-title">{event.title}</div>
               <div className="event-time">Thursdays - Mondays | {event.start_time}- {event.end_time}</div>
             </div>

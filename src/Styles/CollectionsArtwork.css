@@ -153,3 +153,45 @@ letter-spacing: 0.01063rem;
   background-color: #1A1A1A;
   color: #fff;
 }
+
+/* Media Query for max-width: 768px */
+@media (max-width: 768px) {
+  .collections-artwork {
+    padding: 2rem;
+  }
+
+  .tab-container {
+    flex-direction: column;
+  }
+
+  .tab-item {
+    font-size: 0.85rem;
+  }
+}
+
+/* Media Query for max-width: 480px */
+@media (max-width: 480px) {
+  .collections-artwork {
+    padding: 1rem;
+  }
+
+  .search-bar input {
+    font-size: 0.8rem;
+  }
+
+  .tab-item {
+    font-size: 0.7rem;
+  }
+
+  .filter-options {
+    flex-direction: column;
+  }
+
+  .all-results {
+    font-size: 0.8rem;
+  }
+
+  .pagination button {
+    padding: 0.4rem 0.8rem;
+  }
+}

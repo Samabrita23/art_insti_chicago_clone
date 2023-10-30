@@ -33,11 +33,22 @@ const Artworks: React.FC = () => {
       <div className="artwork-cards">
         {artworks.map((artworkRail) => (
           <Link to={`/${artworkRail.api_model}/${artworkRail.id}`} key={artworkRail.id} className="artwork-card">
-            <img
-              src={`https://www.artic.edu/iiif/2/${artworkRail.image_id}/full/843,/0/default.jpg`}
-              alt={artworkRail.title}
-              loading='lazy'
-            />
+            {artworkRail.image_id ? (
+              <img
+                src={`https://www.artic.edu/iiif/2/${artworkRail.image_id}/full/843,/0/default.jpg`}
+                alt={artworkRail.title}
+                loading='lazy'
+              />
+            ) : (
+              <div className="fallback-image">
+                <img
+                src=
+                { 'https://artic-web.imgix.net/7b38c611-392c-422d-8eea-53be80ac65cd/EighthBlackbirdSaverioTruglia.jpg?rect=0%2C525%2C3204%2C1800&auto=format%2Ccompress&q=80&fit=crop&crop=faces%2Ccenter&w=1200&h=674'}
+                alt={artworkRail.title}
+                loading='lazy'
+              />
+              </div>
+            )}
             <div className="artwork-title">{artworkRail.title}</div>
             <div className="artist-title">{artworkRail.artist_title}</div>
           </Link>

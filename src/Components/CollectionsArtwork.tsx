@@ -17,16 +17,10 @@ import Pagination from './Pagination';
 
 
 interface Artwork {
+  id: string;
   image_id: string;
   title: string;
   artist_title: string;
-}
-
-interface ArtworksResponse {
-  data: {
-    total_pages: number;
-    results: Artwork[];
-  };
 }
 
 interface TabItem {
@@ -57,9 +51,14 @@ const CollectionsArtwork: React.FC = () => {
 
   const fetchArtworks = async () => {
     const apiUrl = `https://api.artic.edu/api/v1/artworks?page=${currentPage}&limit=50`;
-  
+    
     try {
       const response = await fetch(apiUrl);
+      if (!response.ok) {
+        // Handle network error
+        throw new Error(`Network error: ${response.statusText}`);
+      }
+
       const data = await response.json();
   
       if (data && data.data && Array.isArray(data.data)) {
@@ -161,15 +160,20 @@ const CollectionsArtwork: React.FC = () => {
       {/* Artwork Cards */}
 
       <div className="artwork-cards">
-        {artworks && artworks.map((artwork) => (
-          <CollectionCard
-            key={artwork.image_id}
-            imageId={artwork.image_id}
-            title={artwork.title}
-            artistTitle={artwork.artist_title}
-          />
-        ))}
-      </div>
+  {artworks &&
+    artworks.map((artwork) =>
+      artwork.id ? (
+        <CollectionCard
+        key={artwork.id || artwork.image_id} 
+        id={artwork.id || ''}
+
+          imageId={artwork.image_id}
+          title={artwork.title}
+          artistTitle={artwork.artist_title}
+        />
+      ) : null
+    )}
+</div>
 
 
      {/* Pagination */}

@@ -1,6 +1,8 @@
 # ArticReact - Art Institute Website Clone Project
 
-Welcome to the Art Institute Replica Project! Built with React, TypeScript, and CSS, this project aims to recreate the main page, collections page, and detail page of the [Art Institute of Chicago](https://www.artic.edu/), providing a close replica of its features.
+Welcome to the Art Institute Replica Project! Built with React, TypeScript, and CSS, this project aims to recreate the main page, collections page, and detail page of the art website, providing a close replica of its features.
+
+Live project Link: https://art-insti-chicago-clone.vercel.app/
 
 ## Main Features
 
